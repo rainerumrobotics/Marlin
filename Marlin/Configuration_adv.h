@@ -735,17 +735,17 @@
    * Requires ATMEGA2560 (Arduino Mega)
    *
    * Tested with this bootloader:
-   *   https://github.com/FleetProbe/MicroBridge-Arduino-ATMega2560
+   *   https://github.com/rainerumrobotics/MicroBridge-Arduino-ATMega2560
    */
-  //#define SD_FIRMWARE_UPDATE
+  #define SD_FIRMWARE_UPDATE
   #if ENABLED(SD_FIRMWARE_UPDATE)
-    #define SD_FIRMWARE_UPDATE_EEPROM_ADDR    0x1FF
+    #define SD_FIRMWARE_UPDATE_EEPROM_ADDR    0x3FF
     #define SD_FIRMWARE_UPDATE_ACTIVE_VALUE   0xF0
     #define SD_FIRMWARE_UPDATE_INACTIVE_VALUE 0xFF
   #endif
 
   // Add an optimized binary file transfer mode, initiated with 'M28 B1'
-  //#define FAST_FILE_TRANSFER
+  #define FAST_FILE_TRANSFER
 
 #endif // SDSUPPORT
 
